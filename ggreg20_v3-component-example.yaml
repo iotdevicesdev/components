@@ -60,7 +60,7 @@ ggreg20_v3:
   dose_power_factor: 0.00378     # CPM to µSv/h conversion for J305
   equivalent_dose_factor: 0.00332 # CPM to equivalent µSv/h conversion for J305
 
-  # Sensor definitions (REQUIRED)
+  # Sensor definitions (ALL ARE REQUIRED)
   radiation_power:
     name: "Radiation Power"
   equivalent_dose:
