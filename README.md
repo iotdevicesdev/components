@@ -87,6 +87,7 @@ sensor:
           send_every: 1
 ```
 
+## YAML Examples
 ### Local external component config
 
 <img width="1174" height="612" alt="image" src="https://github.com/user-attachments/assets/4247279d-252e-4596-9a03-440f4941e018" />
@@ -190,6 +191,9 @@ ggreg20_v3:
 
 ## Links
 [GGreg20_V3 Product](https://iot-devices.com.ua/en/product/ggreg20_v3-ionizing-radiation-detector-with-geiger-tube-sbm-20/)
+
 [Geiger counter GGreg20_V3: maximum radiation that can be measured](https://iot-devices.com.ua/en/maximum-radiation-that-can-be-measured-by-geiger-counter-ggreg20_v3-en/)
+
 [Geiger tube J305 conversion factor: differences between the coefficient for source radiation power and absorbed dose. Technical note](https://iot-devices.com.ua/en/geiger-tube-j305-conversion-factor-difference-for-radiation-source-power-and-absorbed-dose-technical-note-en/)
+
 [Geiger tube J305: How to calculate the conversion factor of CPM to μSv/h Technical note](https://iot-devices.com.ua/en/geiger-tube-j305-how-to-calculate-the-conversion-factor-of-cpm-technical-note-en/)
