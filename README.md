@@ -11,7 +11,7 @@ The component simplifies the integration of the GGreg20\_V3 module with any ESP-
 
 The component automatically calculates and provides **six** essential sensors in Home Assistant:
 
-1.  **Dose Power ($\mu\text{Sv/h}$):** Ionizing radiation power.
+1.  **Radiation Power ($\mu\text{Sv/h}$):** Ionizing radiation power.
 2.  **Equivalent Dose ($\mu\text{Sv/h}$):** Equivalent dose absorbed by the human body.
 3.  **Total Accumulated Dose ($\mu\text{Sv}$):** Total integrated dose over time.
 4.  **Radiation Counts Per Minute ($\text{CPM}$):** Calculated pulse rate per measurement period.
@@ -59,13 +59,13 @@ The following configuration blocks **must** be provided to define the sensor ent
 
 ## 🚦 Status Logic
 
-The **Status** sensor is a Text Sensor that reports the current operational state based on the calculated $\text{CPM}$ and Dose Power values:
+The **Status** sensor is a Text Sensor that reports the current operational state based on the calculated $\text{CPM}$ and Radiation Power values:
 
 | Condition | Status | Notes |
 | :--- | :--- | :--- |
 | $\text{CPM} > 315K$ | **Sensor Overflow Error** | Radiation level exceeds the GM tube's capacity. |
-| $0.6 < \text{Dose Power} \leq 315K \text{ CPM}$ | **Danger** | High radiation level. |
-| $0.3 < \text{Dose Power} \leq 0.6 \mu\text{Sv/h}$ | **Warning** | Elevated radiation level. |
+| $0.6 < \text{Rad.Power} \leq 315K \text{ CPM}$ | **Danger** | High radiation level. |
+| $0.3 < \text{Rad.Power} \leq 0.6 \mu\text{Sv/h}$ | **Warning** | Elevated radiation level. |
 | $3 \leq \text{CPM} \leq 0.3 \mu\text{Sv/h}$ | **Normal** | Safe or typical background level. |
 | $\text{CPM} < 3$ | **Sensor Error (Low Count)** | Possible sensor disconnection or tube malfunction (too few pulses received). |
 
@@ -78,7 +78,7 @@ You can use standard $\text{ESPHome}$ filters on the output sensors. For example
 ```yaml
 sensor:
   - platform: filter
-    name: "GGreg20 Dose Power MA5"
+    name: "GGreg20 Radiation Power MA5"
     # Source ID combines the Component ID and the sensor's normalized key/name:
     source_id: ggreg_radiation_power  
     filters:
