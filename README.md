@@ -73,7 +73,7 @@ The **Status** sensor is a Text Sensor that reports the current operational stat
 
 ## ✨ Advanced Configuration (Optional)
 
-You can use standard $\text{ESPHome}$ filters on the output sensors. For example, to apply a 5-minute Moving Average filter to the Dose Power sensor, use the $\text{filter}$ platform:
+You can use standard $\text{ESPHome}$ filters on the output sensors. For example, to apply a 5-minute Moving Average filter to the Radiation Power sensor, use the $\text{filter}$ platform:
 
 ```yaml
 sensor:
